@@ -1,0 +1,3 @@
+[submodule "common_assets"]
+	path = project/common_assets
+	url = git@github.com:4ynyky/game_common_assets.git
