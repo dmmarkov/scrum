@@ -13,6 +13,8 @@ func _ready():
 
 func _on_spawn_soliders_timer_timeout():
 	var solider = preload("res://common_assets/Enemies/solider1.tscn").instance()
-	solider.position = $spawn_soliders.global_position #use node for shoot position
-	get_parent().add_child(solider) #don't want bullet to move with me, so add it as child of parent
+	solider.position = $spawn_soliders.global_position 
+	add_child(solider) 
 	
+func die():
+	get_parent().die(self)
