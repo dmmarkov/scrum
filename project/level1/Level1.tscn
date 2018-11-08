@@ -4,7 +4,7 @@
 [ext_resource path="res://common_assets/Assets/tileset_level1.tres" type="TileSet" id=2]
 [ext_resource path="res://common_assets/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://common_assets/Items/axe.tscn" type="PackedScene" id=4]
-[ext_resource path="res://common_assets/Enemies/solider1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://common_assets/Enemies/soldier1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://common_assets/Items/bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://common_assets/Items/maps/map1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://common_assets/GUI/HUD/HUD.tscn" type="PackedScene" id=8]
@@ -43,7 +43,7 @@ position = Vector2( -71.6525, -31.418 )
 
 position = Vector2( 127.375, -79.6946 )
 
-[node name="solider1" parent="." index="3" instance=ExtResource( 5 )]
+[node name="soldier1" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 616.501, -19.5954 )
 
@@ -51,11 +51,11 @@ position = Vector2( 616.501, -19.5954 )
 
 position = Vector2( 530.555, -82.1381 )
 
-[node name="spawn_soliders" type="Node2D" parent="." index="5"]
+[node name="spawn_soldiers" type="Node2D" parent="." index="5"]
 
 position = Vector2( 694.68, -137.38 )
 
-[node name="spawn_soliders_timer" type="Timer" parent="." index="6"]
+[node name="spawn_soldiers_timer" type="Timer" parent="." index="6"]
 
 process_mode = 1
 wait_time = 3.0
@@ -72,6 +72,6 @@ position = Vector2( 1589.24, -292.98 )
 
 [connection signal="player_weapon_changed" from="Mark" to="GUI" method="_on_Mark_player_weapon_changed"]
 
-[connection signal="timeout" from="spawn_soliders_timer" to="." method="_on_spawn_soliders_timer_timeout"]
+[connection signal="timeout" from="spawn_soldiers_timer" to="." method="_on_spawn_soldiers_timer_timeout"]
 
 
