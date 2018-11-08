@@ -9,7 +9,7 @@
 [ext_resource path="res://common_assets/Items/maps/map1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://common_assets/GUI/HUD/HUD.tscn" type="PackedScene" id=8]
 
-[node name="level1" type="Node"]
+[node name="level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -64,13 +64,13 @@ autostart = true
 
 [node name="map1" parent="." index="7" instance=ExtResource( 7 )]
 
-position = Vector2( 1589.24, -292.98 )
+position = Vector2( 1708.95, -280.737 )
 
-[node name="GUI" parent="." index="8" instance=ExtResource( 8 )]
+[node name="HUD" parent="." index="8" instance=ExtResource( 8 )]
 
-[connection signal="player_hp_changed" from="Mark" to="GUI" method="_on_Mark_player_hp_changed"]
+[connection signal="player_hp_changed" from="Mark" to="HUD" method="_on_Mark_player_hp_changed"]
 
-[connection signal="player_weapon_changed" from="Mark" to="GUI" method="_on_Mark_player_weapon_changed"]
+[connection signal="player_weapon_changed" from="Mark" to="HUD" method="_on_Mark_player_weapon_changed"]
 
 [connection signal="timeout" from="spawn_soldiers_timer" to="." method="_on_spawn_soldiers_timer_timeout"]
 
