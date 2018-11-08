@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://common_assets/Assets/tileset_level1.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://common_assets/Enemies/solider1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://common_assets/Items/bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://common_assets/Items/maps/map1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://common_assets/GUI/HUD/HUD.tscn" type="PackedScene" id=8]
 
 [node name="level1" type="Node"]
 
@@ -63,7 +64,11 @@ autostart = true
 
 [node name="map1" parent="." index="7" instance=ExtResource( 7 )]
 
-position = Vector2( 1708.95, -280.737 )
+position = Vector2( 1589.24, -292.98 )
+
+[node name="GUI" parent="." index="8" instance=ExtResource( 8 )]
+
+[connection signal="player_hp_changed" from="Mark" to="GUI" method="_on_Mark_player_hp_changed"]
 
 [connection signal="timeout" from="spawn_soliders_timer" to="." method="_on_spawn_soliders_timer_timeout"]
 

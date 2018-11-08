@@ -1,20 +1,19 @@
 extends Node
 
+signal player_died
+signal player_win
+
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
+	$Mark.connect("player_died",self,"_on_die")
+	$Mark.connect("player_win",self,"_on_win")
 
 func _on_spawn_soliders_timer_timeout():
 	var solider = preload("res://common_assets/Enemies/solider1.tscn").instance()
 	solider.position = $spawn_soliders.global_position 
 	add_child(solider) 
 	
-func die():
-	get_parent().die(self)
+func _on_die():
+	emit_signal("player_died", self)
+	
+func _on_win():
+	emit_signal("player_win", self)
