@@ -17,3 +17,12 @@ func _on_die():
 	
 func _on_win():
 	emit_signal("player_win", self)
+	
+func _on_viewport_resized():
+	var viewport = get_node("/level1")
+	var height = viewport.get_rect().size.y
+	var width = viewport.get_rect().size.x
+	
+	# Set viewpoint to run at 1080px tall, but adjust width to match aspect ratio of screen
+	viewport.set_size_override(true, Vector2(1080*width/height,1080))
+	viewport.set_size_override_stretch(true)
