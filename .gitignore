@@ -40,3 +40,5 @@ export_presets.cfg
 *.exe
 *.out
 *.app
+
+*.import
