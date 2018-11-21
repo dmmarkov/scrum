@@ -1,6 +1,7 @@
 extends Node
 
 var level1 = preload("res://level1/Level1.tscn");
+var level0 = preload("res://level0/level0_dungeon.tscn");
 var die = preload("res://common_assets/GUI/die/die.tscn");
 var win = preload("res://common_assets/GUI/win/win.tscn");
 
@@ -11,7 +12,11 @@ func _ready():
 
 func _on_open_level(level, menu):
 	menu.queue_free()
-	var current_level = level1.instance()
+	var current_level;
+	if (level == "level1"):
+		current_level = level1.instance()
+	else:
+		current_level = level0.instance()
 	current_level.connect("player_died", self, "_on_player_died")
 	current_level.connect("player_win", self, "_on_player_win")
 	get_parent().add_child(current_level)
