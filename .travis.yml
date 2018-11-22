@@ -1,0 +1,9 @@
+language: minimal
+
+git:
+  submodules: false
+
+jobs:
+  include:
+    - stage: check
+      script: ./tools/check-files-format.sh
