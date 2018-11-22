@@ -6,4 +6,4 @@ git:
 jobs:
   include:
     - stage: check
-      script: ./tools/check-files-format.sh
+      script: sed -i 's|git@github.com:4ynyky/game_common_assets.git|https://github.com/4ynyky/game_common_assets.git|' .gitmodules && git submodule update --init && ./tools/check-files-format.sh
