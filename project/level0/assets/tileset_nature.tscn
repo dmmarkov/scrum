@@ -42,7 +42,7 @@ extents = Vector2( 16.032, 9.32096 )
 custom_solver_bias = 0.0
 extents = Vector2( 16.0261, 9.58053 )
 
-[node name="tileset_nature" type="Node2D" index="0"]
+[node name="tileset_nature" type="Node2D"]
 
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
