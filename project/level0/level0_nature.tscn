@@ -8,6 +8,7 @@
 [node name="level0_nature" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="map" type="TileMap" parent="." index="0"]
 
@@ -35,5 +36,9 @@ _sections_unfolded = [ "Cell", "Collision" ]
 position = Vector2( 196.961, 151.995 )
 
 [node name="nature_background" parent="." index="2" instance=ExtResource( 4 )]
+
+offset = Vector2( 0, -280 )
+transform = Transform2D( 1, 0, 0, 1, 0, -280 )
+scroll_ignore_camera_zoom = false
 
 

@@ -5,7 +5,7 @@
 [ext_resource path="res://level0/assets/nature_parallax/3.png" type="Texture" id=3]
 [ext_resource path="res://level0/assets/nature_parallax/Cerca.png" type="Texture" id=4]
 
-[node name="nature_background" type="ParallaxBackground" index="0"]
+[node name="nature_background" type="ParallaxBackground"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -14,7 +14,7 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 scroll_offset = Vector2( 0, 0 )
 scroll_base_offset = Vector2( 0, 0 )
-scroll_base_scale = Vector2( 1, 1 )
+scroll_base_scale = Vector2( 0.5, 0.5 )
 scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
@@ -22,57 +22,66 @@ _sections_unfolded = [ "Scroll" ]
 
 [node name="sky" type="ParallaxLayer" parent="." index="0"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 510, 0 )
-_sections_unfolded = [ "Motion" ]
+_sections_unfolded = [ "Material", "Motion", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="1" type="Sprite" parent="sky" index="0"]
 
-position = Vector2( 257.337, 72.7501 )
-scale = Vector2( 1.00421, 1.00421 )
+position = Vector2( 257.091, 72.982 )
+scale = Vector2( 1.00743, 1.00743 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+region_enabled = true
+region_rect = Rect2( 0, 0, 510, 145 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="icemountains" type="ParallaxLayer" parent="." index="1"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion", "Transform" ]
 
 [node name="2" type="Sprite" parent="icemountains" index="0"]
 
-position = Vector2( 255.966, 130.934 )
-scale = Vector2( 1.14468, 1.14468 )
+position = Vector2( 256.862, 130.885 )
+scale = Vector2( 1.14663, 1.14663 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+region_enabled = true
+region_rect = Rect2( 0, 0, 448, 150 )
+_sections_unfolded = [ "Region", "Transform", "Z Index" ]
 
 [node name="mountains" type="ParallaxLayer" parent="." index="2"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion" ]
 
 [node name="3" type="Sprite" parent="mountains" index="0"]
 
-position = Vector2( 256.472, 189.419 )
+position = Vector2( 256.472, 194.419 )
 scale = Vector2( 1.14356, 1.14356 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+region_enabled = true
+region_rect = Rect2( 0, 0, 448, 88 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="hills" type="ParallaxLayer" parent="." index="3"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion" ]
 
 [node name="Cerca" type="Sprite" parent="hills" index="0"]
 
-position = Vector2( 256.265, 179.843 )
-scale = Vector2( 1.00415, 1.00415 )
+position = Vector2( 255.61, 182.027 )
+scale = Vector2( 1.00159, 1.00159 )
 texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 144 )
+_sections_unfolded = [ "Region" ]
 
 
