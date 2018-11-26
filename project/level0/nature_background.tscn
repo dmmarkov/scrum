@@ -17,7 +17,7 @@ scroll_base_offset = Vector2( 0, 0 )
 scroll_base_scale = Vector2( 0.5, 0.5 )
 scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
-scroll_ignore_camera_zoom = true
+scroll_ignore_camera_zoom = false
 _sections_unfolded = [ "Scroll" ]
 
 [node name="sky" type="ParallaxLayer" parent="." index="0"]
@@ -38,7 +38,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="icemountains" type="ParallaxLayer" parent="." index="1"]
 
-motion_scale = Vector2( 0.1, 0.1 )
+motion_scale = Vector2( 0.2, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion", "Transform" ]
@@ -54,7 +54,7 @@ _sections_unfolded = [ "Region", "Transform", "Z Index" ]
 
 [node name="mountains" type="ParallaxLayer" parent="." index="2"]
 
-motion_scale = Vector2( 0.1, 0.1 )
+motion_scale = Vector2( 0.3, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion" ]
@@ -70,7 +70,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="hills" type="ParallaxLayer" parent="." index="3"]
 
-motion_scale = Vector2( 0.1, 0.1 )
+motion_scale = Vector2( 0.4, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 512, 0 )
 _sections_unfolded = [ "Motion" ]
